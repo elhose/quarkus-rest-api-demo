@@ -2,9 +2,11 @@ package com.ttpsc.service;
 
 import com.ttpsc.entity.Part;
 import com.ttpsc.repository.PartRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
+@Service
 public class PartServiceImpl implements PartService {
 
     private PartRepository partRepository;
