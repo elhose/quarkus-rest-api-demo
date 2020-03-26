@@ -1,11 +1,11 @@
 package com.ttpsc.controller;
 
-import com.ttpsc.entity.Car;
 import com.ttpsc.entity.Part;
 import com.ttpsc.service.PartService;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+import java.util.List;
 import java.util.Optional;
 
 @Path("/parts")
@@ -48,7 +48,7 @@ public class PartController {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public Iterable<Part> getParts() {
+    public List<Part> getParts() {
         return partService.getParts();
     }
 }

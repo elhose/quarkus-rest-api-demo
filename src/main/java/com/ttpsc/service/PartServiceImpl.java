@@ -4,6 +4,7 @@ import com.ttpsc.entity.Part;
 import com.ttpsc.repository.PartRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -42,7 +43,7 @@ public class PartServiceImpl implements PartService {
     }
 
     @Override
-    public Iterable<Part> getParts() {
+    public List<Part> getParts() {
         return partRepository.findAll();
     }
 }

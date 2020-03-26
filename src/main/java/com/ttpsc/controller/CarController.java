@@ -5,6 +5,7 @@ import com.ttpsc.service.CarService;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+import java.util.List;
 import java.util.Optional;
 
 @Path("/cars")
@@ -47,7 +48,7 @@ public class CarController {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public Iterable<Car> getCars() {
+    public List<Car> getCars() {
         return carService.getCars();
     }
 }
