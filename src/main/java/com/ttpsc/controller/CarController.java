@@ -30,12 +30,14 @@ public class CarController {
     }
 
     @POST
+    @Consumes(MediaType.APPLICATION_JSON)
     public void addCar(Car car) {
         carService.addCar(car);
     }
 
     @PUT
     @Path("{id}")
+    @Consumes(MediaType.APPLICATION_JSON)
     public void updateCar(@PathParam("id") Long id, Car car){
         carService.updateCar(id, car);
     }
