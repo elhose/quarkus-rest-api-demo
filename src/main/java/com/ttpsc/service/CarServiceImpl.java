@@ -2,16 +2,18 @@ package com.ttpsc.service;
 
 import com.ttpsc.entity.Car;
 import com.ttpsc.repository.CarRepository;
-import org.springframework.stereotype.Service;
 
+import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Inject;
 import java.util.List;
 import java.util.Optional;
 
-@Service
+@ApplicationScoped
 public class CarServiceImpl implements CarService {
 
     private CarRepository carRepository;
 
+    @Inject
     public CarServiceImpl(CarRepository carRepository) {
         this.carRepository = carRepository;
     }
