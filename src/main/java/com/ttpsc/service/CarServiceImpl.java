@@ -45,4 +45,9 @@ public class CarServiceImpl implements CarService {
     public List<Car> getCars() {
         return carRepository.findAll();
     }
+
+    @Override
+    public List<Car> findByOrderByPriceDesc() {
+        return carRepository.findByOrderByPriceDesc();
+    }
 }

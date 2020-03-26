@@ -11,4 +11,5 @@ public interface CarService {
     void updateCar(Long id, Car car);
     void deleteCar(Long id);
     List<Car> getCars();
+    List<Car> findByOrderByPriceDesc();
 }

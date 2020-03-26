@@ -51,4 +51,11 @@ public class CarController {
     public List<Car> getCars() {
         return carService.getCars();
     }
+
+    @GET
+    @Path("/top")
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<Car> getMostExpensiveCars() {
+        return carService.findByOrderByPriceDesc();
+    }
 }

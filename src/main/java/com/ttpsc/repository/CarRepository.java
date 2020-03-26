@@ -9,4 +9,6 @@ public interface CarRepository extends CrudRepository<Car, Long> {
 
     List<Car> findAll();
 
+    List<Car> findByOrderByPriceDesc();
+
 }
